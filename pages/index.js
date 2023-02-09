@@ -1,41 +1,42 @@
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
-import { getSortedPostsData } from "../lib/posts";
+import Link from "next/link";
 import { loadPosts } from "../lib/load-posts";
+import Date from "../components/date";
+import { getSortedPostsData } from "../lib/posts";
 export async function getStaticProps() {
-  const allPostData = getSortedPostsData();
-  // const posts = loadPosts();
-  // console.log("post", posts);
+  //靜態生成
+  // for SEO , 在使用者進入前頁面所需數據 , 預渲染
+  // 在服務器上運行 非客戶端
+  //如果是以請求的方式獲取數據的話 使用服務器端渲染 server-side-rendering(getServerSideProps)
+  const allPostsData = getSortedPostsData();
   const res = await fetch("https://random-data-api.com/api/v2/users?size=2");
   const data = await res.json();
+  console.log(allPostsData);
   return {
     props: {
       data,
-      allPostData,
+      allPostsData,
     },
   };
 }
-export default function Home({ allPostData, data }) {
+export default function Home({ allPostsData }) {
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
+        <link rel="icon" href="../public/favicon.ico" />
       </Head>
-      <section className={utilStyles.headingMd}>
-        <p>[hi, my name is harries , it is my NextJs practice]</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this in{" "}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
-        {data.map((item) => (
-          <>
-            <p>id:{item.id}</p>
-            <p>first_name:{item.first_name}</p>
-            <p>last_name:{item.last_name}</p>
-          </>
-        ))}
-      </section>
+      {allPostsData.map(({ id, title, date }) => (
+        <li className={utilStyles.listItem} key={id}>
+          <Link href={`/posts/${id}`}>{title}</Link>
+          <br />
+          <small className={utilStyles.lightText}>
+            <Date dateString={date} />
+          </small>
+        </li>
+      ))}
     </Layout>
   );
 }
