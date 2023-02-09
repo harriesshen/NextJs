@@ -25,3 +25,8 @@ img {
   max-width: 100%;
   display: block;
 }
+
+footer{
+  display: flex;
+  flex-direction: row;
+}
