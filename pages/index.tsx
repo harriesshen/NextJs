@@ -5,7 +5,8 @@ import Link from "next/link";
 import { loadPosts } from "../lib/load-posts";
 import Date from "../components/date";
 import { getSortedPostsData } from "../lib/posts";
-export async function getStaticProps() {
+import { GetStaticPaths,GetStaticProps,GetServerSideProps } from "next";
+export const getStaticProps: GetStaticProps = async ()=> {
   //靜態生成
   // for SEO , 在使用者進入前頁面所需數據 , 預渲染
   // 在服務器上運行 非客戶端
