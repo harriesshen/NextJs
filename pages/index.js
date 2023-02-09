@@ -37,6 +37,7 @@ export default function Home({ allPostsData }) {
           </small>
         </li>
       ))}
+      <span>123123</span>
     </Layout>
   );
 }
