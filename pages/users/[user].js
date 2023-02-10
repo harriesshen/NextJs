@@ -18,7 +18,7 @@ export async function getStaticPaths() {
   return { paths, fallback: "blocking" };
 }
 export default function User({ data }) {
-  // console.log("data", data);
+  console.log("data", data);
   if ("message" in data && data.message == "Not Found") {
     return (
       <div className="text-center text-light">
@@ -45,7 +45,7 @@ export default function User({ data }) {
         <img src={`${data.avatar_url}`} width={"15%"} className="pb-2"></img>
 
         <span>{data.login}</span>
-        <p className="my-2">The Nextjs for example</p>
+        <p className="my-2">{data.bio}</p>
         <div>
           <span>{`${data.followers}`}</span>
           <span className="px-2">Followers</span>
