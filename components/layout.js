@@ -28,11 +28,15 @@ export default function Layout({ children, home }) {
       </Head>
       <div className="container">
         <div className="row justify-content-center">
-          <div className={`${styles.layout} col-6`}>
+          <div className={`${styles.layout} col-4`}>
             {children}
-            <footer>
-              <p>{pathname == "/" ? "You are at  " : "Go back to  "}</p>
-              <Link href={"/"}>Home</Link>
+            <footer className="justify-content-center align-items-center m-3 text-light">
+              <p className="mb-0">
+                {pathname == "/" ? `You are at` : "Go back to"}&nbsp;
+              </p>
+              <a className="text-light" href={"/"}>
+                Home
+              </a>
             </footer>
           </div>
         </div>

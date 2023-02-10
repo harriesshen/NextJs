@@ -1,7 +1,6 @@
 import "../styles/global.css";
 import "bootstrap/dist/css/bootstrap.css";
 import Head from "next/head";
-
 import Link from "next/link";
 import Layout from "../components/layout";
 export default function App({ Component, pageProps }) {

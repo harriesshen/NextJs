@@ -2,6 +2,7 @@
   height: 670px;
   display: flex;
   align-items: center;
+  background-color:cadetblue;
 }
 
 .header {
