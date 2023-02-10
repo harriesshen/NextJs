@@ -1,4 +1,3 @@
-import RepoCard from "react-repo-card";
 import styles from "../styles/next.module.css";
 export const getStaticProps = async () => {
   //靜態生成
