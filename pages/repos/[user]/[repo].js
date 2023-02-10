@@ -13,7 +13,7 @@ export async function getServerSideProps(context) {
 }
 
 export default function Repo({ data }) {
-  console.log("data", data);
+  // console.log("data", data);
   if ("message" in data && data.message == "Not Found") {
     return (
       <div className="text-center text-light">
@@ -25,7 +25,11 @@ export default function Repo({ data }) {
   return (
     <>
       <Head>
-        <title>{data.name || "A user"} | 2023 harries NextJs</title>
+        <title>
+          {data.name
+            ? `${data.name} | 2023 harries NextJs `
+            : "A user | 2023 harries NextJs"}
+        </title>
         <meta
           name="description"
           content="2023 harriesshen Nextjs Fetch GitHub API"

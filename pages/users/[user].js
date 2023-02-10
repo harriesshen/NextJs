@@ -30,7 +30,11 @@ export default function User({ data }) {
   return (
     <>
       <Head>
-        <title>{data.name || "A user"} | 2023 harries NextJs</title>
+        <title>
+          {data.name
+            ? `${data.name} | 2023 harries NextJs `
+            : "A user | 2023 harries NextJs"}
+        </title>
         <meta
           name="description"
           content="2023 harriesshen Nextjs Fetch GitHub API"

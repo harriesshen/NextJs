@@ -9,8 +9,8 @@ export default function Home() {
   const [repo, setRepo] = useState("");
   const { push } = useRouter();
   const handleClick = (type = "user") => {
-    console.log("user", user);
-    console.log("repo", repo);
+    // console.log("user", user);
+    // console.log("repo", repo);
     switch (type) {
       case "user":
         if (user) {
