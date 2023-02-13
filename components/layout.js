@@ -4,6 +4,7 @@ import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Star from "./star";
 const name = "harries";
 export const siteTitle = "Next.js Sample";
 
@@ -30,14 +31,16 @@ export default function Layout({ children, home }) {
         <div className="row justify-content-center">
           <div className={`${styles.layout} col-4`}>
             {children}
-            <footer className="justify-content-center align-items-center m-3 text-light">
+            <div className={`m-3 text-light ${styles.footer}`}>
               <p className="mb-0">
                 {pathname == "/" ? `You are at` : "Go back to"}&nbsp;
+                <a className="text-light" href={"/"}>
+                  Home
+                </a>
               </p>
-              <a className="text-light" href={"/"}>
-                Home
-              </a>
-            </footer>
+
+              <Star></Star>
+            </div>
           </div>
         </div>
       </div>
