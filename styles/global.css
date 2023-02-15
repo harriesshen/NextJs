@@ -34,3 +34,16 @@ footer{
 Link{
   text-decoration: none;
 }
+.cards {
+  height: 25vh ;
+  width: calc(100% / 3 - 16px);
+  margin: 8px;
+  border-radius: 3px;
+  transition: all 200ms ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cards:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}

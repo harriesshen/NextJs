@@ -1,0 +1,15 @@
+.over_text{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.info{
+  background-color: burlywood;
+  color: cadetblue;
+  font-weight: 900;
+  margin-bottom: 3px;
+  font-size: 24px;
+}

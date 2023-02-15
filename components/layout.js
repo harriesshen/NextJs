@@ -29,7 +29,11 @@ export default function Layout({ children, home }) {
       </Head>
       <div className="container">
         <div className="row justify-content-center">
-          <div className={`${styles.layout} col-4`}>
+          <div
+            className={`${styles.layout} ${
+              pathname == "/originScroll" ? "col-4" : "col-4"
+            }`}
+          >
             {children}
             <div className={`m-3 text-light ${styles.footer}`}>
               <p className="mb-0">
@@ -38,8 +42,7 @@ export default function Layout({ children, home }) {
                   Home
                 </a>
               </p>
-
-              <Star></Star>
+              {pathname == "/" ? <Star></Star> : null}
             </div>
           </div>
         </div>

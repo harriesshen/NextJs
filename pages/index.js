@@ -38,6 +38,18 @@ export default function Home() {
           NextJs
         </a>
       </p>
+      <p>
+        See what is{" "}
+        <a className="text-light" href={"/scroll"}>
+          Infinite Scroll
+        </a>
+      </p>
+      <p>
+        See what is{" "}
+        <a className="text-light" href={"/originScroll"}>
+          Origin Scroll
+        </a>
+      </p>
       <div className="input-group mb-3">
         <span className="input-group-text">User</span>
         <input
