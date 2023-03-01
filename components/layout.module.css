@@ -1,8 +1,6 @@
 .container{
-  display: flex;
-  align-items: center;
-  background-color:cadetblue;
-  min-height: 100vh;
+  padding-top: calc(var(--bs-gutter-x) * 0.5);
+  min-height: 95vh;
   width: 100%;
 }
 .header {
@@ -19,5 +17,9 @@
   flex-direction: column;
 }
 .footer{
- text-align: center;
+ text-align: right;
+ padding-right: 1em;
+}
+.rowColor{
+  background-color: rgb(227, 227, 240);
 }

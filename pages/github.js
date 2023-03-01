@@ -33,24 +33,7 @@ export default function Home() {
         <link rel="icon" href="../public/favicon.ico" />
       </Head>
 
-      <p>
-        See what is{" "}
-        <a className="text-light" href={"/scroll"}>
-          Infinite Scroll
-        </a>
-      </p>
-      <p>
-        See what is{" "}
-        <a className="text-light" href={"/originScroll"}>
-          Origin Scroll
-        </a>
-      </p>
-      <p>
-        <a className="text-light" href="./github">
-          Search GitHub User & Repo
-        </a>
-      </p>
-      {/*<div className="input-group mb-3">
+      <div className="input-group mb-3">
         <span className="input-group-text">User</span>
         <input
           type="text"
@@ -91,7 +74,7 @@ export default function Home() {
         >
           Go-&gt;
         </button>
-  </div>*/}
+      </div>
     </>
   );
 }

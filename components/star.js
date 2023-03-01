@@ -57,7 +57,7 @@ const ShowStar = () => {
   for (var i = 1; i <= 5; i++) {
     fiveStar.push(
       <i
-        className="fa-regular fa-star fa-xl"
+        className={`fa-regular fa-star fa-xl ${styles.starBtn}`}
         onClick={(e) => starListener(e)}
         id={`star${i}`}
         key={`star${i}`}

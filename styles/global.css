@@ -6,6 +6,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
+  background-color:rgba(180, 154, 105, 0.993) !important;
 }
 
 * {
@@ -14,11 +15,12 @@ body {
 
 a {
   color: #FFFFFF;
-  text-decoration: none ;
+  font-weight: 800;
+  text-decoration: none !important;
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
 
 img {
@@ -46,4 +48,9 @@ Link{
 }
 .cards:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button.btn{
+  border: 3px solid rgb(99, 99, 104);
+  border-radius: 3px;
 }

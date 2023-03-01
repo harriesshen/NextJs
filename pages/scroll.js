@@ -13,26 +13,29 @@ export default function Scroll({ res }) {
     setPosts((posts) => [...posts, ...newPosts]);
   };
   return (
-    <div className="container">
-      <InfiniteScroll
-        dataLength={posts.length}
-        next={getMorePosts}
-        hasMore={hasMore}
-        loader={<h3> Loading...</h3>}
-        endMessage={<h4>Nothing more to show</h4>}
-      >
-        {posts.map((item) => (
-          <div key={item.id} className={`${styles.info}`}>
-            <div className="row justinfy-content-center">
-              <span className="">{item.id}</span>
+    <>
+      <div className={styles.dataLength}>{posts.length}</div>
+      <div className="container">
+        <InfiniteScroll
+          dataLength={posts.length}
+          next={getMorePosts}
+          hasMore={hasMore}
+          loader={<h3> Loading...</h3>}
+          endMessage={<h4>Nothing more to show</h4>}
+        >
+          {posts.map((item) => (
+            <div key={item.id} className={`${styles.info}`}>
+              <div className="row justinfy-content-center">
+                <span className="">{item.id}</span>
+              </div>
+              <div className="row">
+                <span className={`col ${styles.over_text}`}>{item.title}</span>
+              </div>
             </div>
-            <div className="row">
-              <span className={`col ${styles.over_text}`}>{item.title}</span>
-            </div>
-          </div>
-        ))}
-      </InfiniteScroll>
-    </div>
+          ))}
+        </InfiniteScroll>
+      </div>
+    </>
   );
 }
 

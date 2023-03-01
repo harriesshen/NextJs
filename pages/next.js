@@ -14,6 +14,10 @@ export const getStaticProps = async () => {
   };
 };
 export default function Next({ data }) {
+  var obj1 = { gender: "m" };
+  var obj2 = obj1;
+  obj2.name = "abc";
+  console.log(obj2);
   return (
     <>
       <div className={`d-flex rounded flex-column p-3 ${styles.nextBorder}`}>
