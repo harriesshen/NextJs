@@ -21,5 +21,6 @@
  padding-right: 1em;
 }
 .rowColor{
-  background-color: rgb(227, 227, 240);
+  background-color: #3da5d9;
+  border-radius: 0 10px 10px 0;
 }

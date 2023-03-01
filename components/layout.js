@@ -62,8 +62,8 @@ export default function Layout({ children, home }) {
             <i className={`fa-regular fa-star fa-xl`}></i>
             {createBtn(data)}
           </div>
-          <div className={`offset-1 col-7 ${styles.rowColor}`}>
-            <div className="d-flex justify-content-center align-content-center h-100 flex-wrap">
+          <div className={`offset-1 col-7 ${styles.rowColor} rounded`}>
+            <div className="d-flex justify-content-center align-content-center h-100 flex-wrap ">
               <div className={`${styles.layout}`}>{children}</div>
             </div>
           </div>
