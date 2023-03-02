@@ -17,6 +17,12 @@
 .dataLength{
   position: fixed;
   top: 1em;
-  left: 0;
+  right: 0;
   font-size: 2rem;
+}
+
+.scrollBar{
+  overflow-y: overlay;
+  overflow-x: hidden;
+  height: 90vh;
 }

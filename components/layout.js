@@ -13,8 +13,16 @@ export default function Layout({ children, home }) {
   //畫面資料(name,url)
   const data = [
     {
+      name: "個人介紹",
+      url: "",
+    },
+    {
       name: "My GitHub",
       url: "next",
+    },
+    {
+      name: "手刻板網頁",
+      url: "basketball",
     },
     {
       name: "InfiniteScroll",
@@ -37,7 +45,9 @@ export default function Layout({ children, home }) {
       </div>
     ));
   };
-  return (
+  return pathname === "/basketball" ? (
+    <>{children}</>
+  ) : (
     <>
       <div className={`${styles.container} container-fluid`}>
         <Head>

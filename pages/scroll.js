@@ -15,13 +15,15 @@ export default function Scroll({ res }) {
   return (
     <>
       <div className={styles.dataLength}>{posts.length}</div>
-      <div className="container">
+      <div className={`container ${styles.scrollBar}`} id="InfiniteWindow">
         <InfiniteScroll
           dataLength={posts.length}
           next={getMorePosts}
           hasMore={hasMore}
           loader={<h3> Loading...</h3>}
           endMessage={<h4>Nothing more to show</h4>}
+          scrollThreshold={0.99}
+          scrollableTarget="InfiniteWindow"
         >
           {posts.map((item) => (
             <div key={item.id} className={`${styles.info}`}>

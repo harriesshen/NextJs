@@ -1,0 +1,58 @@
+.logo2{
+    display: none;
+}
+
+.main{
+    background: linear-gradient(rgba(227,97,33,.4), rgba(0,0,0,.5)) , 
+    url(/images/pic4.jpg);
+    background-size: cover;
+}
+.bgColor{
+    background-color: rgba(231,29,54,0.9);
+}
+.navbar_brand:hover .logo1{
+    display: none;
+}
+.navbar_brand:hover .logo2{
+    display: block;
+}
+.nav_item{
+    font-weight: bold;
+    font-size: 26px;
+}
+.navbar_nav .nav_item .nav_link:hover{
+    color: #FFFFFF;
+}
+.carousel_item img{
+    min-height: 400px;
+    max-height: 600px;
+    object-fit: contain;
+}
+.teamText{
+    font-weight: bold;
+    color:white;
+}
+.card img,.school img{
+    height: 150px;
+    object-fit: cover;
+}
+.card_body{
+    background-color: rgba(238, 150, 75, 0.3);
+}
+.btn:hover{
+    background-color:#E71D36
+}
+.footer{
+    background-color: rgb(33,35,37);
+    color: #fafafa;
+    display: block;
+}
+.footer img:nth-child(1){
+    height: 150px;
+}
+.footer li a{
+    color:white;
+}
+.link{
+    background-color: rgb(21, 22, 23);
+}
