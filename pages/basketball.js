@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from "next/Image";
+import Image from "next/image";
 import team_p1 from "../public/images/202154_210811.jpg";
 import team_p2 from "../public/images/202154_210811_2.jpg";
 import team_p3 from "../public/images/大資盃_210811.jpg";
