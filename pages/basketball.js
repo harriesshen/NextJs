@@ -1,148 +1,91 @@
 import Head from "next/head";
 import Image from "next/Image";
-// import Link from "next/link";
-// import image from "../public/images";
-import NUTCIM_B from "../public/images/NUTCIM(B).png";
-import NUTCIM_W from "../public/images/NUTCIM(W).png";
-import TEAM_P1 from "../public/images/202154_210811.jpg";
-import TEAM_P2 from "../public/images/202154_210811_2.jpg";
-import TEAM_P3 from "../public/images/大資盃_210811.jpg";
-import TEAM_P4 from "../public/images/202154_210811.jpg";
+import team_p1 from "../public/images/202154_210811.jpg";
+import team_p2 from "../public/images/202154_210811_2.jpg";
+import team_p3 from "../public/images/大資盃_210811.jpg";
+import team_p4 from "../public/images/202154_210811.jpg";
 import game from "../public/images/game.jpg";
 import gameSet from "../public/images/game_set.jpg";
-import NUTC_GIF from "../public/images/NUTC_logo.gif";
-import backetball from "../public/images/basketball-ball.png";
 import styles from "../styles/basketball.module.css";
 export default function Basketball(props) {
   return (
     <>
       <Head>
         <title>NUTCIM</title>
-        <link
-          rel="icon"
-          key="icon"
-          href="../public/images/basketball-ball.png"
-        />
+        <link rel="icon" key="icon" href="/images/basketball_ball.png" />
       </Head>
-      <header>
-        <nav
-          className={`navbar navbar-expand-lg navbar-light fixed-top ${styles.bgColor}`}
-        >
-          <div className="container-fluid">
-            <a className={`navbar-brand ${styles.navbar_brand}`} href="#">
-              <div className={styles.logo1}>
-                <Image className="logo1" src={NUTCIM_B} alt="123" />
-              </div>
-              <div className={styles.logo2}>
-                <Image className="logo2" src={NUTCIM_W} alt="123" />
-              </div>
-            </a>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse " id="navbarNav">
-              <ul className="navbar-nav ml-auto">
-                <li className={`nav-item active ${styles.nav_item}`}>
-                  <a className={`nav-link ${styles.nav_link}`} href="#">
-                    首頁 <span className="sr-only"></span>
-                  </a>
-                </li>
-                <li className={`nav-item ${styles.nav_item}`}>
-                  <a
-                    className="nav-link "
-                    href="#"
-                    data-toggle="modal"
-                    data-target="#exampleModal"
-                  >
-                    得獎紀錄
-                  </a>
-                </li>
-                <li className={`nav-item ${styles.nav_item}`}>
-                  <a className="nav-link  " href="./video.html">
-                    比賽影片
-                  </a>
-                </li>
-                <li className={`nav-item ${styles.nav_item}`}>
-                  <a className="nav-link  " href="./player.html">
-                    球員名單
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
+
       <main className={styles.main}>
         <div className="pt-5"></div>
         <div
           id="carouselExampleIndicators"
           className="carousel slide pt-5 pb-3"
-          data-ride="carousel"
+          data-bs-ride="carousel"
         >
-          <ol className="carousel-indicators">
-            <li
-              data-target="#carouselExampleIndicators"
-              data-slide-to="0"
+          <div className="carousel-indicators">
+            <button
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
               className="active"
-            ></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          </ol>
+            ></button>
+            <button
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+            ></button>
+            <button
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+            ></button>
+          </div>
           <div className="carousel-inner">
             <div className={`carousel-item active ${styles.carousel_item}`}>
               <Image
                 className="d-block w-100"
-                src={TEAM_P1}
+                src={team_p1}
                 alt="First slide"
               />
             </div>
             <div className={`carousel-item ${styles.carousel_item}`}>
               <Image
                 className="d-block w-100"
-                src={TEAM_P2}
+                src={team_p2}
                 alt="Second slide"
               />
             </div>
             <div className={`carousel-item ${styles.carousel_item}`}>
               <Image
                 className="d-block w-100"
-                src={TEAM_P3}
+                src={team_p3}
                 alt="Third slide"
               />
             </div>
           </div>
-          <a
+          <button
             className="carousel-control-prev"
-            href="#carouselExampleIndicators"
-            role="button"
-            data-slide="prev"
+            data-bs-target="#carouselExampleIndicators"
+            //href="#carouselExampleIndicators"
+            type="button"
+            data-bs-slide="prev"
           >
             <span
               className="carousel-control-prev-icon"
               aria-hidden="true"
             ></span>
-            <span className="sr-only">Previous</span>
-          </a>
-          <a
+            <span className="visually-hidden ">Previous</span>
+          </button>
+          <button
             className="carousel-control-next"
-            href="#carouselExampleIndicators"
-            role="button"
-            data-slide="next"
+            data-bs-target="#carouselExampleIndicators"
+            // href="#carouselExampleIndicators"
+            type="button"
+            data-bs-slide="next"
           >
             <span
               className="carousel-control-next-icon"
               aria-hidden="true"
             ></span>
-            <span className="sr-only">Next</span>
-          </a>
+            <span className="visually-hidden">Next</span>
+          </button>
         </div>
         <div className="container mt-3">
           <div className="row">
@@ -150,7 +93,7 @@ export default function Basketball(props) {
               <div className={`card ${styles.card}`}>
                 <Image
                   className="card-Image-top"
-                  src={TEAM_P4}
+                  src={team_p4}
                   alt="Card Image cap"
                 />
                 <div className={`card-body ${styles.card_body}`}>
@@ -159,8 +102,8 @@ export default function Basketball(props) {
                   <button
                     type="button"
                     className={`btn btn-primary fw-bold ${styles.btn} `}
-                    data-toggle="modal"
-                    data-target="#exampleModal"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
                   >
                     Go
                   </button>
@@ -169,7 +112,7 @@ export default function Basketball(props) {
               <div
                 className="modal fade"
                 id="exampleModal"
-                tabindex="-1"
+                tabIndex="-1"
                 aria-labelledby="exampleModalLabel"
                 aria-hidden="true"
               >
@@ -181,12 +124,10 @@ export default function Basketball(props) {
                       </h5>
                       <button
                         type="button"
-                        className="close"
-                        data-dismiss="modal"
+                        className="btn-close"
+                        data-bs-dismiss="modal"
                         aria-label="Close"
-                      >
-                        <span aria-hidden="true">&times;</span>
-                      </button>
+                      ></button>
                     </div>
                     <div className="modal-body">
                       <table className="table">
@@ -251,46 +192,6 @@ export default function Basketball(props) {
           </div>
         </div>
       </main>
-      <footer className={styles.footer}>
-        <div className="container py-3 ">
-          <div className="row">
-            <div className="col-lg-5 d-flex align-items-center">
-              <Image src={NUTC_GIF} alt="123" />
-              <Image src={NUTCIM_W} alt="456" />
-            </div>
-            <div className="col-lg align-self-center text-center">
-              <ul className="list-unstyled mt-3 fw-bold align-self-center">
-                <li>學校：台中科技大學</li>
-                <li>科系：資訊管理科系</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div className={styles.link}>
-          <div className="container">
-            <div className="row ">
-              <div className="col-lg">
-                <ul className="list-unstyled mt-3 fw-bold d-flex justify-content-around">
-                  <li>
-                    <a href="#">首頁</a>
-                  </li>
-                  <li>
-                    <a href="#" data-toggle="modal" data-target="#exampleModal">
-                      得獎紀錄
-                    </a>
-                  </li>
-                  <li>
-                    <a href="./video.html">比賽影片</a>
-                  </li>
-                  <li>
-                    <a href="./player.html">球員名單</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
     </>
   );
 }

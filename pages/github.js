@@ -1,10 +1,10 @@
 import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
+import Layout, { siteTitle } from "../components/index_layout";
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/router";
 
-export default function Home() {
+export default function Github() {
   const [user, setUser] = useState("");
   const [repo, setRepo] = useState("");
   const { push } = useRouter();
@@ -30,7 +30,7 @@ export default function Home() {
     <>
       <Head>
         <title>{siteTitle}</title>
-        <link rel="icon" href="../public/favicon.ico" />
+        {/*<link rel="icon" href="../public/favicon.ico" /> */}
       </Head>
 
       <div className="input-group mb-3">

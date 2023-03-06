@@ -1,4 +1,4 @@
-import Layout from "../../components/layout";
+import Layout from "../../components/index_layout";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import Head from "next/head";
 import Date from "../../components/date";
@@ -22,7 +22,7 @@ export default function Post({ postData }) {
     </Layout>
   );
 }
-export const getStaticPaths:GetStaticPaths = async() => {
+export const getStaticPaths: GetStaticPaths = async () => {
   // Return a list of possible value for id
   const paths = getAllPostIds();
   console.log("paths", paths);
@@ -31,7 +31,7 @@ export const getStaticPaths:GetStaticPaths = async() => {
     fallback: false,
   };
 }
-export const getStaticProps:GetStaticProps = async ({params})=> {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   // Fetch necessary data for the blog post using params.id
   console.log("params", params);
   const postData = await getPostData(params.id);

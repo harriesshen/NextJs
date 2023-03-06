@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "./layout.module.css";
+import styles from "./index_layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -51,7 +51,7 @@ export default function Layout({ children, home }) {
     <>
       <div className={`${styles.container} container-fluid`}>
         <Head>
-          <link rel="icon" href="/favicon.ico" />
+          {/*<link rel="icon" href="/favicon.ico" />*/}
           <meta
             name="description"
             content="前端工程師 沈舜鴻 NextJs ReactJs 履歷"
